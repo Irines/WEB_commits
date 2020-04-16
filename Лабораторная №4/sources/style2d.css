@@ -1,0 +1,59 @@
+.five-point-star {
+  display: block;
+  margin: 20% 43%;
+  width: 0px;
+  height: 0px;
+  border-right: 120px solid transparent;
+  border-bottom: 90px solid green;
+  border-left: 120px solid transparent;
+  transform: rotate(37deg); 
+  -webkit-transform: rotate(37deg);  /*префиксы для разных браузеров */
+  -moz-transform: rotate(37deg);
+  -ms-transform: rotate(37deg);
+  -o-transform: rotate(37deg);
+  transition:ease-out 3s ;
+}
+
+.five-point-star:hover {
+  transform: scale(3,3);
+  -webkit-transform: scale(3,3);  /*префиксы для разных браузеров */
+  -moz-transform:  scale(3,3);
+  -ms-transform:  scale(3,3);
+  -o-transform:  scale(3,3); 
+}
+/* маленький треугольник вверху */
+.five-point-star:before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  top: -56px;
+  left: -72px;
+  content: "";
+  border-bottom: 84px solid green;
+  border-left: 28px solid transparent;
+  border-right: 28px solid transparent;
+  -webkit-transform: rotate(323deg);/*префиксы для разных браузеров */
+  -moz-transform: rotate(323deg);
+  -ms-transform: rotate(323deg);
+  -o-transform: rotate(323deg);
+  transform: rotate(323deg);
+}
+
+.five-point-star:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  top: 0;
+  left: -120px;
+  content: "";
+  border-right: 120px solid transparent;
+  border-bottom: 90px solid green;
+  border-left: 120px solid transparent;
+  -webkit-transform: rotate(286deg);/*префиксы для разных браузеров */
+  -moz-transform: rotate(286deg);
+  -ms-transform: rotate(286deg);
+  -o-transform: rotate(286deg);
+  transform: rotate(286deg);
+} 

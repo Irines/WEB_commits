@@ -1,0 +1,115 @@
+ul {
+    max-height: 10px;
+}
+
+li {
+    display: inline-block; 
+    margin-right: 10px;
+    color: #778899;
+    font-size:20px;
+}
+
+body{
+overflow: hidden;
+}
+.center{
+    text-align: center;
+    display: block;
+}
+
+a {
+    color: rgb(22, 22, 22);
+}
+
+.foto{
+    position: absolute;
+    top:300px;
+    float: left;
+}
+
+.footer{
+    position: fixed;
+    display: table-row;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 10%;
+   max-height: 70px;
+   background-color: #E0D2C7;
+   color: rgb(27, 24, 24);
+   /* text-align: center; */
+}
+
+.header { 
+    background: #D5BAE4; 
+}
+
+.layout { 
+    position: relative;
+}
+
+.layout2 {
+    top:270px;
+    position: relative;
+}
+
+.layout DIV { position: absolute; }
+.col1 { background: #C7E3E4; width: 33%; height:260px;text-align: center;}
+.col2 { background: #E0D2C7; left: 33%; width: 34%; height:260px; text-align: center;}
+.col3 { background: #ECD5DE; right: 0; width: 33%; height:260px;text-align: center;}
+.layout2 DIV { position: absolute; }
+.cl1 { background: #C7E3E4; width: 33%;   text-align: center; height:360px}
+.cl2 { background: #E0D2C7; left: 33%; width: 34%;   text-align: center;height:360px}
+.cl3 { background: #ECD5DE; right: 0; width: 33%; text-align: center; height:360px}
+
+table {
+    width: 50%; /* Ширина таблицы */
+    background: rgb(0, 0, 0); /* Цвет фона таблицы */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    border-spacing: 1px; /* Расстояние между ячейками */
+    margin: 0px auto;
+    margin-top: 30px;
+   }
+
+   td, th {
+    background: greenyellow; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+   }
+
+   /* Style all font awesome icons */
+   .fa {
+    padding: 20px;
+    margin-top: 5px;
+    font-size: 30px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+span {
+    width: 100px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.i {
+    display: inline;
+}
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-instagram {
+    background: rgb(236, 47, 88);
+    color: white;
+  }
+
+/* Twitter */
+.fa-skype {
+    background: #00aff0;
+    color: white;
+  }

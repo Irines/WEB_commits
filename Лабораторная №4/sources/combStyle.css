@@ -1,0 +1,114 @@
+.five-point-star {
+    display: block;
+    margin: 20% 43%;
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-right: 120px solid transparent;
+    border-bottom: 90px solid orange;
+    border-left: 120px solid transparent;
+    /* transform: rotate(37deg); 
+    -webkit-transform: rotate(37deg); 
+    -moz-transform: rotate(37deg);
+    -ms-transform: rotate(37deg);
+    -o-transform: rotate(37deg); */
+    animation-duration: 1.6s;
+    animation-name: animation;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear; 
+    transform-origin: 50% 50%;
+  }
+  
+   @keyframes animation {
+    from {
+        border-bottom: 90px solid orange;
+    }
+  
+    to {
+        border-bottom: 90px solid rgb(133, 15, 50);
+        transform: translateX(100px) scale(1.5,1.5);
+        -webkit-transform:translateX(100px) scale(1.5,1.5);
+       -moz-transform:translateX(100px) scale(1.5,1.5);
+       -ms-transform: translateX(100px) scale(1.5,1.5);
+       -o-transform:translateX(100px) scale(1.5,1.5);
+    } 
+
+    50% {
+        border-bottom:90px solid rgb(255, 49, 13);
+        transform: translateX(150px) scale(1.7,1.7);
+        -webkit-transform:translateX(150px) scale(1.7,1.7);
+       -moz-transform:translateX(150px) scale(1.7,1.7);
+       -ms-transform:translateX(150px) scale(1.7,1.7);
+       -o-transform:translateX(150px) scale(1.7,1.7);
+    }
+
+    75% {
+      border-bottom:90px solid rgb(184, 8, 8);
+     transform: translateX(200px) scale(2,2);
+     -webkit-transform:translateX(200px) scale(2,2);  /*префиксы для разных браузеров */
+     -moz-transform: translateX(200px) scale(2,2);
+     -ms-transform: translateX(200px) scale(2,2);
+     -o-transform: translateX(200px) scale(2,2);
+    }
+  } 
+
+  @keyframes animation1 {
+    from {
+          border-bottom: 90px solid orange;
+      }
+    
+      to {
+          border-bottom: 90px solid rgb(133, 15, 50);
+      } 
+      50% {
+          border-bottom: 84px solid rgb(255, 49, 13);
+      }
+      75% {
+         border-bottom:90px solid rgb(184, 8, 8);
+      }
+    }
+
+  /* маленький треугольник вверху */
+  .five-point-star1 {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    top: -56px;
+    left: -72px;
+    content: "";
+    border-bottom: 84px solid orange;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    -webkit-transform: rotate(323deg);/*префиксы для разных браузеров */
+    -moz-transform: rotate(323deg);
+    -ms-transform: rotate(323deg);
+    -o-transform: rotate(323deg);
+    transform: rotate(323deg);
+    animation-duration: 1.6s;
+    animation-name: animation1;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear; 
+  }
+  
+  .five-point-star2 {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    top: 0;
+    left: -120px;
+    content: "";
+    border-right: 120px solid transparent;
+    border-bottom: 90px solid orange;
+    border-left: 120px solid transparent;
+    -webkit-transform: rotate(286deg);/*префиксы для разных браузеров */
+    -moz-transform: rotate(286deg);
+    -ms-transform: rotate(286deg);
+    -o-transform: rotate(286deg);
+    transform: rotate(286deg);
+    animation-duration: 1.6s;
+    animation-name: animation1;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear; 
+  } 
