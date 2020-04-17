@@ -1,42 +1,44 @@
-var submit = document.getElementsByClassName("submit");
+let submit = document.getElementsByClassName("submit"); // TODO: move in onready event
 class User {
     constructor(newName, newSurname, newGender, newBirthdate) {
         this.name = newName;
         this.surname = newSurname;
         this.gender = newGender;
         this.birthdate = newBirthdate;
-      }
-//TODO problem with name and surname setters
-    set name (newName) {
-        if (newName ==="") {
-            alert('Input at list 1 symbol in name field');
+    }
+    set name (newName) { // TODO: move validation up
+        if (this._validateInput(newName)) {
+          this._name = newName;
          }
-         this._name = newName;
     }
     set surname (newSurname) {
-        if (newSurname==="") {
-            alert('Input at list 1 symbol in surname field');
-         }
-         this._surname = newSurname;
-    } 
-
+      if (this._validateInput(newSurname)) {
+        this._surname = newSurname;
+       }
+    }
     set birthdate (newBirthdate)
     {
       if (this._validate_date(newBirthdate)) {
         this._birthdate = newBirthdate;
-      }
-      else {
+      } else {
         alert("Введена некорректная дата!");
       }
     }
-
+    _validateInput(value)
+    {
+      if(value==="") {
+        alert('Input at list 1 symbol in name or surname field');
+      } else {
+        return true;
+      }
+    }
     /* Функция разбивает дату на составляющие (метод split()), 
     а затем выполняет проверку составляющих при помощи объекта Date и методов getFullYear(), getMonth() и getDate(). */
     // arrD[1] -= 1 Потому что у объекта Date отсчет месяцев начинается с 0.
     _validate_date(value){
-        var arrD = value.split("/");
+        let arrD = value.split("/");
         arrD[1] -= 1;
-        var d = new Date(arrD[2], arrD[1], arrD[0]);
+        let d = new Date(arrD[2], arrD[1], arrD[0]);
         if ((d.getFullYear() == arrD[2]) && (d.getMonth() == arrD[1]) && (d.getDate() == arrD[0])) {
           return true;
         } 
@@ -50,15 +52,12 @@ class User {
       let consonants =letters.get("consonants");
       return this._codeFromSurname(vowels,consonants);
     }
-
     nameCode() {
-    let letters = this._separateLetters(this._name);
-    let vowels = letters.get("vowels"), consonants = letters.get("consonants");
-    return this._codeFromName(vowels,consonants);
+      let letters = this._separateLetters(this._name);
+      let vowels = letters.get("vowels"), consonants = letters.get("consonants");
+      return this._codeFromName(vowels,consonants);
     }
-
-    _codeFromSurname(vowels,consonants)
-    {
+    _codeFromSurname(vowels,consonants) {
         let code = '';
         for (let i = 0, j = 0; code.length < 3;) {
             if (typeof consonants[i] !== 'undefined') {
@@ -73,8 +72,7 @@ class User {
         }
         return code;
     }
-    _codeFromName(vowels, consonants)
-    {
+    _codeFromName(vowels, consonants) {
         let code = '';
         if (consonants.length == 3)
         {
@@ -104,9 +102,8 @@ class User {
     }
     // Наличие символа в массиве гласных можно проверить с помощью indexOf
     _isVowel(char) {
-        return ['a', 'e', 'i', 'o', 'u'].indexOf(char.toLowerCase()) !== -1;
+        return ['a', 'e', 'i', 'o', 'u'].indexOf(char.toLowerCase()) !== -1; // todo: arr.includes(a);
     }
-
     _separateLetters(someData){
         let vowels = [];
         let consonants = [];
@@ -131,14 +128,12 @@ class User {
     то она переходит к обработке второго символа и так далее,
     пока не будет обнаружен символ, который не может быть преобразован в числовое значение, 
     после этого она возвращает полученное целое число */
-
-    _parseDate(Date) {
-        const parsedDate = Date.split("/").map(function (value) {
+    _parseDate(date) { // TODO: no variables from upper case
+        const parsedDate = date.split("/").map(function (value) {
           return parseInt(value, 10);
         })
         return parsedDate;
       }
-
     _codeFromBirthDate() {
         const months = {
           1: "A", 2: "B", 3: "C", 4: "D", 5: "E", 6: "F",
@@ -158,11 +153,10 @@ class User {
           + this._codeFromBirthDate()).toUpperCase();
       }
 }
-
 function makeCode() {
-    let user = new User(document.getElementById('field1').value, 
-    document.getElementById('field2').value, 
-    document.getElementById('field4').value,
+    let user = new User(document.getElementById('name').value, 
+    document.getElementById('surname').value, 
+    document.getElementById('gender').value,
     document.getElementById('bday').value);
     document.getElementById('fiscal-code').innerHTML = user.getCode(); 
 }
@@ -200,25 +194,25 @@ function vowelLen() {
 
 //@@@@@@@@@@@@@@@@@@@@@@TASK3
 
-function classifyRug()
+function classifyrug()
 {
-  //input like aaaa,bbbb,cccc
-  var  str= document.getElementById('rugInput').value;  
-  var Rug=str.split(',');
-    //Rug.length = 4
-    //Rug[0].length = 3
+  //let str = "aaaa,aaaa,aaaa";
+  //input like aaaa,bbbb,cccc without spaces
+  let  str= document.getElementById('rugInput').value;  
+  let rug=str.split(',').map( i=> i.split(""));
+  //console.log(rug);
   function symmetryHorizontal()
   {
-    for (let i=0; i<Math.floor(Rug.length/2); i++)
+    for (let i=0; i<Math.floor(rug.length/2); i++)
     {
-      if (Rug.length%2 != 0)
+      if (rug.length%2 != 0)
       {
-        if(i == Math.floor(Rug.length/2))
+        if(i == Math.floor(rug.length/2))
           continue;
       }
-      for (let j=0; j<Rug[0].length; j++)
+      for (let j=0; j<rug[0].length; j++)
       {
-        if (Rug[i][j] !== Rug[Rug.length - 1 - i][j])
+        if (rug[i][j] !== rug[rug.length - 1 - i][j])
         {
           return false;
         }
@@ -229,16 +223,16 @@ function classifyRug()
 
   function symmetryVertical()
   {
-    for (let j=0; j<Math.floor(Rug[0].length/2) ;j++)
+    for (let j = 0; j < Math.floor(rug[0].length / 2); j++)
     {
-      if (Rug[0].length%2 != 0)
+      if (rug[0].length%2 != 0)
       {
-        if(j == Math.floor(Rug[0].length/2))
+        if(j == Math.floor(rug[0].length/2))
           continue;
       }
-      for (let i=0; i<Rug.length;i++)
+      for (let i=0; i<rug.length;i++)
       {
-        if (Rug[i][j] !== Rug[i][Rug[0].length- 1 - j])
+        if (rug[i][j] !== rug[i][rug[0].length- 1 - j])
           return false;
       }
     }
@@ -253,5 +247,3 @@ function classifyRug()
     document.getElementById('rugRes').innerHTML ="vertically symmetric";
   else  document.getElementById('rugRes').innerHTML ="imperfect";
 }
-
-

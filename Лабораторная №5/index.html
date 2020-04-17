@@ -10,19 +10,17 @@
     <body>
 
         <div class="topnav">
-            <a class="active" href="index.html">Generate code task</a>
-            <a href="#news">Harshad task</a>
-            <a href="#contact">Third task</a>
+            <a class="active" href="index.html">Javascript task</a>
         </div>
         <div class="row">
             <div class="column">
                 <div class="form-style-2">
                     <div class="form-style-2-heading">Input your information to create special code</div>
                     <form action="" method="get">
-                        <label for="field1"><span>Name </span><input type="text" class="input-field" id="field1" /></label>
-                        <label for="field2"><span>Surname </span><input type="text" class="input-field" id="field2"/></label>
+                        <label for="name"><span>Name </span><input type="text" class="input-field" id="name" /></label>
+                        <label for="surname"><span>Surname </span><input type="text" class="input-field" id="surname"/></label>
                         <label><span>Birthday</span><input type="text" class="birthday-field" id="bday" maxlength="10" /></label>
-                        <label for="field4"><span>Gender</span><select id="field4" class="select-field">
+                        <label for="gender"><span>Gender</span><select id="gender" class="select-field">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         </select></label>
@@ -35,9 +33,6 @@
                         </div>
                     </div>
                  </div>
-              
-        
-               
             </div>
             <div class="column">
                 <div class="form-style-2">
@@ -49,13 +44,12 @@
                         <span class="output-text" id="length">[........]</span>
                     </div>
                 </div>
-                
             </div>
             <div class="column">
                 <div class="form-style-2">
                     <div class="form-style-2-heading">Symmetry of rug-matrix</div> 
                         <label><span>Input your rug</span><input type="text" class="input-field-matrix" id="rugInput"  /></label>
-                        <label><span> </span><input type="button" onclick="classifyRug()" class="submit" type="submit" value="Result"></label>
+                        <label><span> </span><input type="button" onclick="classifyrug()" class="submit" type="submit" value="Result"></label>
                         <div class="block">
                             <h4>Your rug is:</h4>
                             <span class="output-text" id="rugRes">........</span>
