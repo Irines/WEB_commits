@@ -1,4 +1,3 @@
-let submit = document.getElementsByClassName("submit"); // TODO: move in onready event
 class User {
     constructor(newName, newSurname, newGender, newBirthdate) {
         this.name = newName;
