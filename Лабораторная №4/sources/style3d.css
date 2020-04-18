@@ -8,10 +8,13 @@
   .rectangle:hover{
     transition:ease 2s ;
     transform: perspective(400px) translate3d(81px, 81px, 81px);
+    -webkit-transform: perspective(400px) translate3d(81px, 81px, 81px);  /*префиксы для разных браузеров */
+    -moz-transform: perspective(400px) translate3d(81px, 81px, 81px);
+    -ms-transform: perspective(400px) translate3d(81px, 81px, 81px);
+    -o-transform: perspective(400px) translate3d(81px, 81px, 81px);
     /* The last translation of element-3 is moving the div 120 pixels in the negative direction of the z-axis. 
     Note that you have to apply a value for the perspective also, since without it the translation is not visible. */
   }
-  
   body{
     transform-style: preserve-3d;
   }
