@@ -1,0 +1,36 @@
+html
+{
+	font-family: 'Times New Roman', Times, serif;
+}
+#time
+{
+	position: fixed;
+	bottom: 25%;
+	left: 45%;
+	width: 100%;
+}
+p
+{
+	margin: 0;
+	font-size: 150%;
+}
+thead
+{
+	background: #727272;
+}
+table
+{
+	background: #cfcfcf;
+	border-collapse: collapse;
+	text-align: center;
+	margin:auto;
+	margin-top: 10vh;
+	border: 1px solid black;
+}
+th,td,tr
+{
+	padding: 5px;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: black;
+}

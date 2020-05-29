@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta Charset="utf-8">
+	<link rel ="stylesheet" href="resources/style.css">
+	<script src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js"></script>
+</head>
+<body>
+	
+  
+	<table id = "Table">
+		<caption>
+			<h1>
+				Таблиця з результатами
+			</h1>
+		</caption>
+		<thead>
+			<tr>
+				<th>Назва позиції</th>
+				<th>Назва компанії</th>
+				<th>Остання ціна позиції</th>
+				<th>Різниця з моменту останнього оновлення</th>
+			</tr>
+		</thead>
+		<tbody id = "NewTable">
+		</tbody>
+	</table>
+	
+	<div id="time">
+		<h1>Трекер</h1>
+		<h3>Останнє оновлення було <div id="latestUpdate">0</div> секунд тому.</h3>
+	</div>
+	
+	
+</body>
+	<script src="resources/script.js"></script>
+</html>
