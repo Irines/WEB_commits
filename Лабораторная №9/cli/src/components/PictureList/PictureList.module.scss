@@ -1,0 +1,35 @@
+.PictureList__wrapper {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.PictureList__button_add,
+.PictureList__button_remove {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: lightgreen;
+  transition: box-shadow 70ms;
+
+  &:active {
+    box-shadow: 1px -1px 0 #ccc;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.PictureList__button_remove {
+  background: lightcoral;
+}
+
+.user_upload {
+  text-align: left;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}

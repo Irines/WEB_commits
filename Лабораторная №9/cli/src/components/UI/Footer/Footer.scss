@@ -1,0 +1,44 @@
+footer {
+  position: fixed;
+  display: table-row;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  max-height: 70px;
+  background-color: #e0d2c7;
+  color: rgb(27, 24, 24);
+  margin-top: 20px;
+  /* text-align: center; */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  > a {
+    height: 21px;
+  }
+  > span {
+    margin: 0 1rem;
+  }
+  svg {
+    &:not(.skype-icon) {
+      transform: scale(1.5);
+    }
+    margin: 0 1rem;
+    path,
+    rect {
+      fill: #fff;
+      transition: all 0.22s;
+    }
+
+    &:hover {
+      path,
+      rect {
+        fill: #173e7c;
+      }
+    }
+  }
+}

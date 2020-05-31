@@ -1,0 +1,28 @@
+{
+  "name": "slider-project",
+  "version": "1.0.0",
+  "description": "Dynamic slider",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix cli",
+    "client:install": "npm install --prefix cli",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Irina Kiseleva",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
