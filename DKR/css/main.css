@@ -1,0 +1,214 @@
+/* .col-lg-4 {
+    justify-content: space-between;
+}
+.col2 {
+    display: inline-flex;
+} */
+.container-fluid {
+    /* margin-top: 10px; */
+    align-content: center;
+}
+.nav-col  {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding-inline-start: 5px;
+    margin-bottom: 0;
+}
+.mygroup {
+    display: inline-flex;
+    width: 70%;
+    justify-content: flex-start;
+}
+.mygroup > li {
+    padding-right: 10px;
+}
+.mygroup > ul {
+    padding-left: 0;
+}
+.mygroup2 > li {
+    padding-right: 10px;
+}
+.mygroup2 {
+    display: inline-flex;
+    width: inherit;
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+}
+
+.header-note {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+
+}
+
+.caption1 {
+    bottom: 30%;
+}
+.caption2 {
+    text-align: start;
+    left: 20%;
+    right: 5%;
+}
+/* .button1 {
+    text-align: inher;
+} */
+.note1 {
+    margin-left: 60%;
+}
+.wrapper {
+    margin: 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    
+    /* align-content: center; */
+}
+.row1 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: inline-flex;
+}
+
+.card-deck {
+ margin: 0;
+ padding-left: 8%;
+ padding-right: 8%;
+}
+
+.desk1 {
+    width: 80%;
+}
+#fashion {
+    background-color: rgb(128, 18, 86)
+}
+#tech {
+    background-color: rgb(19, 19, 19);
+}
+
+#nature {
+    background-color: rgb(37, 206, 22);
+}
+
+#people {
+    background-color: rgb(0, 12, 177);
+}
+
+.img {
+    position: relative;
+}
+
+.rect-name2 {
+    position: absolute;
+    background-color: rgb(243, 23, 89); height: 16%; width: 20%; bottom: 15%; color: white; 
+    display: flex;
+}
+
+.rect-name {
+    position: absolute;
+    background-color: rgb(243, 23, 89); height: 15%; width: 15%; top: 76%; color: white; 
+    display: flex;
+}
+
+.rect-text {
+    margin: auto;
+    font-size:1vw;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.p-2 > text {
+    padding: 0;
+}
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.row2 {
+    padding-top: 2%;
+    display: inline-flex;
+    /* width: 80%; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.row3 {
+    padding-top: 2%;
+    display: inline-flex;
+    /* width: 80%; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.rectangle {
+    height: 200px;
+    width: 100%;
+  }
+
+.news {
+    padding: 0 0;
+    display: inline-flex;
+}
+
+.heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large; 
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.heading1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium; 
+    justify-content: center;
+}
+
+.heading2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium; 
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.input-gmail {
+    width: 15%;
+}
+ .inp {
+     /* border-radius: 30%; */
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+ }
+ .inp1 {
+    /* border-radius: 35%; */
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+ }
+
+ .topim {
+	position	: relative;
+	width		: 100%; /* for IE 6 */
+}
+
+.columnm {
+	position	: absolute;
+	top		:  100px;
+	left		: 0;
+    width		: 100%;
+}
+
+.text-img {
+    margin-top: 20px;
+}
+
+.md {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
